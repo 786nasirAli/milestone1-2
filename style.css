@@ -4,7 +4,7 @@ body {
     background-color: #2c3e50;
     color: #ecf0f1;
     margin: 0;
-    padding: 20%;
+    padding: 10px;
     line-height: 1.6;
 }
 
@@ -24,7 +24,6 @@ body {
     padding: 20px;
     background-color: #1abc9c;
     text-align: center;
-    position: relative;
 }
 
 .profile-picture {
@@ -40,7 +39,8 @@ body {
     transform: scale(1.1);
 }
 
-h3 {
+.left-section h3 {
+    color: #ecf0f1;
     border-bottom: 2px solid #ecf0f1;
     padding-bottom: 5px;
     margin-bottom: 15px;
@@ -49,25 +49,30 @@ h3 {
 /* Right Section Styles */
 .right-section {
     padding: 20px;
-    position: relative;
     background-color: #34495e;
 }
 
-h1 {
+.right-section h1 {
     text-align: center;
     color: #e67e22;
     margin-bottom: 20px;
 }
 
-section {
+.right-section section {
     margin-bottom: 20px;
     transition: background-color 0.3s;
     padding: 10px;
     border-radius: 5px;
 }
 
-section:hover {
+.right-section section:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.right-section h3 {
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 /* Button Styles */
@@ -88,18 +93,7 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .resume-container {
-        grid-template-columns: 1fr;
-    }
-
-    .left-section, .right-section {
-        width: 100%;
-    }
-}
-
-/* Additional Styles for Skills Section */
+/* Skills Section */
 #skills ul {
     list-style-type: none;
     padding: 0;
@@ -116,4 +110,35 @@ button:hover {
 
 #skills li:hover {
     background-color: #d35400;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-section {
+        text-align: center;
+    }
+
+    .right-section h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .right-section h1 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
